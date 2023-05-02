@@ -432,11 +432,3 @@ a {
     background-color: rgb(100, 98, 98);
 }
 /* End Navigation*/
-/*last part*/
-.last{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: rgb(154, 150, 150);
-}
