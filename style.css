@@ -1,0 +1,442 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-optical-sizing: calc();
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow:auto;
+}
+
+/*hero section*/
+#hero {
+    background-image: url(./img/pexels-sami-aksu-11189630.jpg);
+    background-size: cover;
+    background-position: top center;
+    z-index: 1;
+    float:inline-start;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100;
+    width: 100;
+    background-color: black;
+    opacity: 0.7s;
+    z-index: -1;
+}
+
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 8rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2) {
+    animation-delay: 2s;
+}
+
+#hero h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgb(240, 11, 11);
+    animation: text_reveal_box 1s ease;
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+#hero h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+#hero .cta {
+    display: inline-block;
+    padding: 6px 17px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgb(218, 5, 5);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 15px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    box-shadow: 5px 5px 5px rgba(255, 2, 2, 0.716);
+}
+
+#hero .cta:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
+}
+
+/*end hero section*/
+
+/*services section*/
+
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#services .section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    text-align: center;
+}
+
+#services .section-title span {
+    color: red;
+}
+
+#services .service-top p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .0rem;
+}
+
+#services .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#services .service-item:nth-child(1) {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5px;
+    background-image: url(./img/pexels-etkin-celep-13552074.jpg);
+    background-size: cover;
+    margin: 30px 5%;
+    z-index: 1;
+}
+
+#services .service-item::after {
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #c6b4b4 100%);
+    opacity: .5;
+    z-index: -1;
+}
+
+#services .service-item:nth-child(2) {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 19px;
+    background-image: url(./img/pexels-виталий-адуцкевич-14065441.jpg);
+    background-size: cover;
+    margin: 30px 5%;
+    z-index: 1;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #4d4a4a 100%);
+    opacity: .5;
+    z-index: -2;
+}
+
+#services .service-item:nth-child(3) {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    padding: 19px;
+    background-image: url(./img/pexels-juan-montes-11097594.jpg);
+    background-size: cover;
+    margin: 30px 5%;
+    z-index: 1;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #3a72d2 100%);
+    opacity: .5;
+    z-index: -1;
+}
+
+#services .service-item:nth-child(4) {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url(./img/185sl-2000x1333.jpg);
+    background-size: cover;
+    margin: 30px 5%;
+    z-index: 1;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #46494d 0%, #807171c7 100%);
+    opacity: .5;
+    z-index: -1;
+}
+
+#services .service-item:nth-child(5) {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    background-image: url(./img/wallpaperflare.com_wallpaper.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    z-index: 1;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #747474 100%);
+    opacity: .8;
+    z-index: -1;
+}
+
+#services .service-item:nth-child(6) {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    background-image: url(./img/1961-chevrolet-biscayne.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    z-index: 1;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #747474 100%);
+    opacity: .8;
+    z-index: -1;
+}
+
+#services .service-item:nth-child(7) {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    background-image: url(./img/84F18_.jPEG);
+    background-size: cover;
+    margin: 10px 5%;
+    z-index: 1;
+}
+
+#services .service-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #747474 100%);
+    opacity: .8;
+    z-index: -1;
+}
+
+/* When you want to add more cars*/
+#services .sevice-item {
+    transition: .3s ease transform;
+}
+
+#services .service-item:hover {
+    transform: scale(1.1);
+}
+
+/*grid*/
+.grid {
+    display: grid;
+    grid-template-columns: 4fr;
+    column-gap: 10px;
+    row-gap: 20px;
+    vertical-align: auto;
+    width: 1140px;
+}
+
+/*end grid*/
+
+#services .service-bottom .icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+#services .service-bottom .icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/*cars name font change*/
+
+.stretched-link{
+    box-shadow: 5px 5px 5px;
+    font-size: 25px;
+}
+/*end of cars name font change*/
+/*end services section*/
+
+
+/*key animation*/
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: rgb(249, 243, 243);
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: rgb(255, 255, 255);
+        font-weight: 500px;
+    }
+}
+
+/*end key animation*/
+
+/*Navigation*/
+#nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 7%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position:fixed ;
+    z-index: 99;
+    padding: 0px 20px;
+}
+#nav h1{
+    font-family: gilroy;
+    font-size:30px;
+    font-weight: 400;
+}
+#nav a{
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+#nava:hover{
+    background-color: rgb(100, 98, 98);
+}
+/* End Navigation*/
+/*last part*/
+.last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(154, 150, 150);
+}
