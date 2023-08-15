@@ -1,4 +1,4 @@
 # carshub
 
-click below the link to visit website
+click on the link to visit website
 https://rajyadav186.github.io/carshub/
